@@ -1,24 +1,27 @@
-let project = document.getElementsByClassName("project");
-let slideIndex = 1;
+let projectIndex = 0; // Start with the first project
+showProject(projectIndex); // Show the initial project
 
-showProject(slideIndex);
+function showProject(index) {
+  const projects = document.getElementsByClassName("project");
 
-function showProject(num) {
-  
-  if (num > project.length) {
-    slideIndex = 1;
-  }
-  
-  if (num < 1) {
-    slideIndex = project.length;
+  // Hide all projects
+  for (let i = 0; i < projects.length; i++) {
+    projects[i].style.display = "none";
   }
 
-  for (let i = 0; i < project.length; i++) {
-    project[i].style.display = "none";
+  // Wrap around logic
+  if (index >= projects.length) {
+    projectIndex = 0; // Reset to the first project if at the end
+  } else if (index < 0) {
+    projectIndex = projects.length - 1; // Set to the last project if at the beginning
+  } else {
+    projectIndex = index; // Set to the valid index
   }
-  project[slideIndex - 1].style.display = "flex";
+
+  // Show the current project
+  projects[projectIndex].style.display = "block";
 }
 
-function navigateProject(num) {
-  showProject((slideIndex += num));
+function navigateProject(direction) {
+  showProject(projectIndex + direction); // Navigate through projects
 }

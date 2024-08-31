@@ -382,11 +382,12 @@ article p {
   color: black;
 
 }
-/* Project Navigation Arrow Buttons */
+/* Project Navigation Arrow Button */
 .project-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: -80px; /* Position it slightly above the project container */
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: white;
   border: none;
@@ -395,29 +396,15 @@ article p {
   font-size: 2rem; /* Increase font size for visibility */
   border-radius: 50%;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  z-index: 10; /* Ensure arrows are above content */
+  z-index: 10; /* Ensure arrow is above content */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds shadow for better visibility */
 }
 
-/* Hover effect for arrows */
+/* Hover effect for the arrow */
 .project-arrow:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* Position adjustments for arrows */
-.project-arrow.left {
-  left: -40px; /* Moved left arrow further outside */
-}
-
-.project-arrow.right {
-  right: -40px; /* Moved right arrow further outside */
-}
-
-/* Ensure parent container has relative positioning */
-#grid__bl__content__projects {
-  position: relative;
+  transform: translate(-50%, -30%) scale(1.1);
 }
 
   /* Project Container Adjustments */
