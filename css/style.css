@@ -384,28 +384,27 @@ article p {
 }
 /* Project Navigation Arrow Button */
 .project-arrow {
-  position: absolute;
-  top: -45px; /* Position it slightly above the project container */
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin: 10px auto 0 auto; /* Center the arrow below the GitHub button */
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: white;
   border: none;
-  padding: 1rem; /* Increase padding for better click area */
+  padding: 0.5rem; /* Adjust padding for better click area */
   cursor: pointer;
-  font-size: 2rem; /* Increase font size for visibility */
+  font-size: 1.5rem; /* Adjust font size for visibility */
   border-radius: 50%;
   transition: background-color 0.3s ease, transform 0.3s ease;
   z-index: 10; /* Ensure arrow is above content */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adds shadow for better visibility */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Adds shadow for better visibility */
 }
 
 /* Hover effect for the arrow */
 .project-arrow:hover {
   background-color: rgba(255, 255, 255, 0.8);
   color: black;
-  transform: translate(-50%, -30%) scale(1.1);
+  transform: scale(1.1);
 }
+
 
   /* Project Container Adjustments */
 .project {
