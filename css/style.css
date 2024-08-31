@@ -385,7 +385,7 @@ article p {
 /* Project Navigation Arrow Button */
 .project-arrow {
   position: absolute;
-  top: -80px; /* Position it slightly above the project container */
+  top: -45px; /* Position it slightly above the project container */
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
